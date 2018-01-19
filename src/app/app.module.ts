@@ -6,9 +6,11 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
 import { PostsService } from './posts.service';
+import { CommentsComponent } from './comments/comments.component';
+import { CommentsService } from './comments.service';
 
 // Define the routes
-const ROUTES = [
+const ROUTES: Routes = [
   {
     path: '',
     redirectTo: 'posts',
@@ -17,13 +19,18 @@ const ROUTES = [
   {
     path: 'posts',
     component: PostsComponent
+  },
+  {
+    path: 'comments',
+    component: CommentsComponent
   }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,7 @@ const ROUTES = [
     HttpModule,
     RouterModule.forRoot(ROUTES) // Add routes to the app
   ],
-  providers: [PostsService],
+  providers: [PostsService, CommentsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

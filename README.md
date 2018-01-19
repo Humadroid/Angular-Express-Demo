@@ -16,6 +16,8 @@ Run `npm run build` shortcut for dist creation and serving from the express serv
 
 (Note: For every change in angular or express to run on server `npm run build` is necessary).
 
+Run `json-server --watch db.json`, this is for faking API call with json-server.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
