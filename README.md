@@ -13,8 +13,9 @@ Run `ng build` to create the dist folder. Then run `node server.js` to serve fro
 or 
 
 Run `npm run build` shortcut for dist creation and serving from the express server. Navigate to `http://localhost:3000` for the app and `http://localhost:3000/api` for the api.
+(Edit: Added nodemon so now `npm run build` will also watch server.)
 
-(Note: For every change in angular or express to run on server `npm run build` is necessary).
+(Note: For every change in angular, to run on server `npm run build` is necessary).
 
 Run `json-server --watch db.json`, this is for faking API call with json-server.
 
