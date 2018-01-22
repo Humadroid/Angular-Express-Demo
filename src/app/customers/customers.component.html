@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row" *ngFor="let customer of customers">
+    <div class="card card-block">
+      <h4 class="card-title">{{ customer.id }}</h4>
+      <p class="card-text">{{customer.first_name}}</p>
+      <p class="card-text">{{customer.last_name}}</p>
+      <p class="card-text">{{customer.phone}}</p>
+    </div>
+  </div>
+</div>

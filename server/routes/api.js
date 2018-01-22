@@ -40,4 +40,16 @@ router.get('/comments', (req, res) => {
     });
 });
 
+router.get('/customers', (req, res) => {
+  // Get customers from the mock api
+  // This should ideally be replaced with a service that connects to MongoDB
+  axios.get(`${API}/customers`)
+    .then(customers => {
+      res.status(200).json(customers.data);
+    })
+    .catch(error => {
+      res.status(500).send(error)
+    });
+});
+
 module.exports = router;
