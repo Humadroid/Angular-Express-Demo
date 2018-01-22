@@ -8,12 +8,14 @@ import { PostsComponent } from './posts/posts.component';
 import { PostsService } from './posts.service';
 import { CommentsComponent } from './comments/comments.component';
 import { CommentsService } from './comments.service';
+import { CustomersComponent } from './customers/customers.component';
+import { CustomersService } from './customers.service';
 
 // Define the routes
 const ROUTES: Routes = [
   {
     path: '',
-    redirectTo: 'posts',
+    redirectTo: 'customers',
     pathMatch: 'full'
   },
   {
@@ -23,6 +25,10 @@ const ROUTES: Routes = [
   {
     path: 'comments',
     component: CommentsComponent
+  },
+  {
+    path: 'customers',
+    component: CustomersComponent
   }
 ];
 
@@ -30,7 +36,8 @@ const ROUTES: Routes = [
   declarations: [
     AppComponent,
     PostsComponent,
-    CommentsComponent
+    CommentsComponent,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,7 @@ const ROUTES: Routes = [
     HttpModule,
     RouterModule.forRoot(ROUTES) // Add routes to the app
   ],
-  providers: [PostsService, CommentsService],
+  providers: [PostsService, CommentsService, CustomersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
